@@ -1,0 +1,18 @@
+spring:
+  rabbitmq:
+    host: ${RABBIT_MQ_HOST:localhost}
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+
+server:
+  port: 30003
+  error:
+    include-message: always
+
+modes: maintenance, operational
+
+exchanges:
+  vendingMachine:
+    command: VendingMachineCommandsExchange
